@@ -1,0 +1,138 @@
+@import 'reset.css';
+@import 'https://fonts.googleapis.com/css?family=Bevan';
+@import 'https://fonts.googleapis.com/css?family=Just+Another+Hand';
+
+body, html { /* grijp het <html>- en het <body>-element vast */
+	height: 100%;
+}
+body { /* grijp het <body>-element vast */
+	background-color: #FAFAFA;
+	background-image: url('../img/achtergrond.png');
+	background-repeat: repeat-x;
+	color: #323232;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 1.5em;
+	margin: 50px 15px 15px 15px;
+	min-width: 775px;
+}
+h1, h2{ /* grijp elk <h1>-element en elk <h2>-element vast */
+	font-family: Bevan, Georgia, Times, 'Times New Roman', serif;
+	text-shadow: 1px 1px #C8C8C8;
+	line-height: 1.25em;
+	margin-bottom: 1em;
+	font-weight: normal;
+}
+h1{ /* grijp elk <h1>-element vast */
+	font-size: 3em;
+}
+h2{ /* grijp elk <h2>-element vast */
+	font-size: 2em;
+}
+p, ul, ol{ /* grijp elk <p>-element, elk <ul>-element en elk <ol>-element vast */
+	margin-bottom: 1em;
+}
+h1 + p{ /* grijp elk <p>-element vlak na elk <h1>-element vast */
+	font-style: italic;
+}
+div p:first-of-type { /* grijp het eerste <p>-element in elk <div>-element vast */
+	line-height: 1.5em;
+}
+#huls { /* grijp het element met als 'id' 'huls' vast */
+	min-height: 100%;
+	position: relative;
+}
+#algemene_informatie{ /* grijp het element met als 'id' 'algemene_informatie' vast */
+	float: left;
+	width: 250px;
+	margin-right: 25px;
+}
+#algemene_informatie > h2,
+#algemene_informatie > h2 + p { /* grijp elk <h2>-element in het element met als 'id' 'algemene_informatie' en elk <p>-element vlak na elk <h2>-element in het element met als 'id' 'algemene_informatie' vast */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	display: inline;
+	text-shadow: none;
+}
+#algemene_informatie > h2::after { /* plaats de denkbeeldige cursor achter elk <h2>-element in het element met als 'id' 'algemene_informatie' */
+	content: ' — ';
+}
+#algemene_informatie > p::first-line { /* grijp elke eerste tekstregel van elk <p>-element in het element met als 'id' 'algemene_informatie' vast */
+	font-weight: bold;
+}
+#receptuur { /* grijp het element met als 'id' 'receptuur' vast */
+	margin-left: 275px;
+}
+#ingredienten > ul > li,
+#bereiding > ul > li { /* grijp elk <li>-element als directe afstammeling van elk <ul>-element in een element met als 'id' 'ingredienten' en elk <li>-element als directe afstammeling van elk <ul>-element in een element met als 'id' 'bereiding' vast */
+	font-family: 'Just Another Hand', cursive;
+	font-size: 2em;
+}
+#ingredienten > ul > li > span,
+#bereiding > ul > li > span { /* grijp elk <span>-element in elk <li>-element als directe afstammeling van elk <ul>-element in het element met als 'id' 'ingredienten' en elk <span>-element in elk <li>-element als directe afstammeling van elk <ul>-element in het element met als 'id' 'bereiding' vast */
+	display: block;
+	margin-bottom: 0.25em;
+}
+#ingredienten > ul > li > ul{ /* grijp elk <ul>-element in elk <li>-element in elk <ul>-element in het element met als 'id' 'ingredienten' vast */
+	list-style-type: square;
+	margin-left: 1em;
+	padding-left: 0;
+}
+#ingredienten > ul > li > ul > li,
+#bereiding > ul > li > ol > li { /* grijp elk <li>-element in elk <ul>-element in elk <li>-element in elk <ul>-element in het element met als 'id' 'ingredienten' en elk <li>-element in elk <ol>-element in elk <li>-element in elk <ul>-element in het element met als 'id' 'bereiding' vast */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.5em;
+}
+#ingredienten > ul > li > ul > li > span{ /* grijp elk <span>-element in elk <li>-element in elk <ul>-element in elk <li>-element in elk <ul>-element in het element met als 'id' 'ingredienten' vast */
+	display: inline;
+	font-weight: bold;
+}
+#bereiding > ul > li > ol { /* grijp elk <ol>-element in elk <li>-element in elk <ul>-element in het element met als 'id' 'bereiding' vast */
+	list-style-type: decimal;
+	margin-left: 1em;
+	padding-left: 0;
+}
+#colofon { /* grijp het element met als 'id' 'colofon' vast */
+	background-image: url('../img/achtergrond_colofon.png');
+	background-repeat: repeat-x;
+	overflow: hidden;
+	margin: 25px -15px 0;
+	padding: 25px 15px 0;
+}
+#colofon > p { /* grijp elk <p>-element als directe afstammeling van het element met als 'id' 'colofon' vast */
+	margin-left: 275px;
+	clear: both;
+}
+#colofon > ul { /* grijp elk <ul>-element in het element met als 'id' 'colofon' vast */
+	margin-left: 275px;
+	float: left;
+}
+#colofon ul > li{ /* grijp elk <li>-element in elk <ul>-element in het element met als 'id' 'colofon' vast */
+	display: inline;
+}
+#meer_weten { /* grijp elk element met als 'id' 'meer_weten' vast */
+	margin-left: 275px;
+}
+a[href="http://www.een.be"] { /* grijp elk <a>-element waarvan het 'href'-attribuut de 'http://www.een.be'-waarde bevat vast */
+	font-weight: bold;
+}
+a[href^="http"] { /* grijp elk <a>-element waarvan het 'href'-attribuut de 'http'-beginwaarde bevat vast */
+	background-image: url('../img/externe_koppeling.gif');
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-right: 15px;
+}
+a[href*="een.be"]{ /* grijp elk <a>-element waarvan het 'href'-attribuut de 'een.be'-waarde bevat vast */
+	background-image: url('../img/een.gif');
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+a:link, a:visited, a:hover, a:active{ /* grijp elk <a>-element volgens pseudoklasse 'link', elk <a>-element volgens pseudoklasse 'visited', elk <a>-element volgens pseudoklasse 'hover' en elk <a>-element volgens pseudoklasse 'active' vast */
+	color: #558CAA;
+	text-decoration: none;
+}
+::selection { /* grijp elk geselecteerde element vast */
+	background-color: #558CAA;
+	color: white;
+	text-shadow: none;
+}
