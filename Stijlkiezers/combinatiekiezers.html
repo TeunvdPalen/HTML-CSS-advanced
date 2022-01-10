@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stijlkiezers</title>
+    <style>
+
+      /* kies het body element */
+      body {
+        max-width: 400px;
+        margin: auto;
+      }
+
+      /* kies het label dat direct na een checkbox komt */
+      input + label{
+        font-weight: bold;
+      }
+
+      /* kies enkel de paragrafen als rechtstreeks kind in het element met een "form" class 
+        en kies het fieldset element
+      */
+      form > p,
+      fieldset{
+        margin-bottom: 2rem;
+      }
+
+      /* kies elke paragraaf in een fieldset */
+      fieldset > p{
+        margin-left: 2rem;
+      }
+
+      /* kies elke span die na een label komt */
+      label ~ span{
+        font-style: italic;
+        color: grey;
+        display: block;
+      }
+
+      /* kies het element met id "message" */
+      #message { 
+        display: block;
+        width: 100%;
+        min-height: 100px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <form class="form">
+      <fieldset>
+        <legend>Personal information</legend>
+        <p>
+          <label for="naam">Name:</label>
+          <input type="text" id="name" class="input">
+          <span>Enter your name</span>
+        </p>
+        <p>
+          <label for="email">Email:</label>
+          <input type="text" id="email" class="input">
+          <span>Enter your email</span>
+        </p>
+      </fieldset>
+
+      <p>
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" class="input"></textarea>
+      </p>
+      <p>
+        <input type="checkbox" id="conditions">
+        <label for="conditions">I accept the conditions.</label>
+      </p>
+      <p>
+        <input type="submit" value="Send">
+      </p>
+    </form>
+
+  </body>
+
+</html>

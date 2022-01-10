@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stijlkiezers</title>
+    <style>
+
+      /* Kies het body element */
+      body {
+        max-width: 400px;
+        margin: 2rem auto;
+      }
+      
+      /* Kies het element met de "form" class */
+      form {
+        margin-top: 2rem;
+      }
+
+      /* Kies elke link en elke bezochte link */
+      a,
+      a:visited {
+        color: tomato;
+        text-decoration: none;
+      }
+
+      /* Kies elke link waar je met de muis over gaan */
+      a:hover {
+        text-decoration: underline;
+        color: red;
+      }
+
+      /* Kies elke link die je in-klikt */
+      a:active {
+        color: darkred;
+      }
+
+      /* Kies elke input die geldig is */
+      input:valid {
+        border: 1px solid green;
+      }
+
+      /* Kies elke input die ongeldig is */
+      input:invalid {
+        border: 1px solid red;
+        box-shadow: none;
+      }
+
+      /* Kies elk label dat na een input van het type checkbox komt */
+      input[type="checkbox"] ~ label {
+        color: red;
+      }
+
+      /* Kies elk label dat na een aangevinkte input van het type checkbox komt */
+      input:checked ~ label {
+        color: green;
+      }
+
+      /* Kies de laatste paragraaf als direct kind van het element met een class "form" */
+      form>:last-child {
+        border-top: 1px solid lightgrey; 
+        padding-top: 1rem;
+      }
+
+      /* Kies de paragraaf als derde kind in de fieldset */
+      fieldset>:nth-child(3) {
+        border-top: 1px solid grey;
+        padding-top: 1rem;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <a href="#">Home</a>
+
+    <form class="form">
+      <fieldset>
+        <legend>Personal information</legend>
+        <p>
+          <label for="naam">Name:</label>
+          <input type="text" id="name" class="input" required>
+        </p>
+        <p>
+          <label for="email">Email:</label>
+          <input type="text" id="email" class="input" required>
+        </p>
+      </fieldset>
+
+      <p>
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" class="input"></textarea>
+      </p>
+      <p>
+        <input type="checkbox" id="conditions">
+        <label for="conditions">I accept the conditions.</label>
+      </p>
+      <p>
+        <input type="submit" value="Send">
+      </p>
+    </form>
+
+  </body>
+
+</html>

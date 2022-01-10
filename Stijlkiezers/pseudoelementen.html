@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stijlkiezers</title>
+    <style>
+
+      /* Kies het body element */
+      body {
+        max-width: 400px;
+        margin: 2rem auto;
+      }
+      
+      /* Kies het "after" element van een label in een fieldset */
+      fieldset label::after {
+        content: '*';
+        font-style: italic;
+        color: red;
+      }
+
+      /* Kies de eerste letter van het intro element */
+      .intro::first-letter {
+        float: left;
+        font-weight: bold;
+        font-size: 4rem;
+        margin-top: .25rem;
+      }
+
+      /* Kies de eerste regel van het intro element */
+      .intro::first-line {
+        font-style: italic;
+      }
+      
+      /* Kies alle placeholder teksten */
+      input::placeholder {
+        color: dimgrey;
+      }
+
+      /* Kies de placeholder tekst van een input element dat verplicht is */
+      input:required::placeholder {
+        color: red;
+      }
+
+      /* Kies een tekst selectie */
+      ::selection {
+        background-color: dimgray;
+        color: white;
+      }
+      
+
+    </style>
+  </head>
+
+  <body>
+
+    <p class="intro">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dolorem, necessitatibus commodi iusto animi
+      aliquam. Iusto hic quasi soluta dolor suscipit, doloribus, in dolorum, omnis cupiditate quo iure recusandae
+      facere?
+    </p>
+
+    <form class="form">
+      <fieldset>
+        <legend>Personal information</legend>
+        <p>
+          <label for="naam">Name:</label>
+          <input type="text" id="name" class="input" required placeholder="Enter your name">
+        </p>
+        <p>
+          <label for="email">Email:</label>
+          <input type="text" id="email" class="input" required placeholder="Enter your email">
+        </p>
+      </fieldset>
+
+      <p>
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" class="input" placeholder="Enter your message"></textarea>
+      </p>
+      <p>
+        <input type="checkbox" id="conditions">
+        <label for="conditions">I accept the conditions.</label>
+      </p>
+      <p>
+        <input type="submit" value="Send">
+      </p>
+    </form>
+
+  </body>
+
+</html>
