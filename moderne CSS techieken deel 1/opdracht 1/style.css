@@ -1,0 +1,90 @@
+body {
+	margin: 0;
+	background-image: linear-gradient(rgb(253, 175, 72), rgb(159, 29, 185));
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+img {
+	max-width: 100%;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 2rem auto;
+}
+
+.cf:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.polaroid {
+	width: 21%;
+	margin: 1%;
+	float: left;
+	box-sizing: border-box;
+	padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+	background-color: white;
+
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+	border-radius: 0.15rem;
+	transition: 500ms cubic-bezier(0.82, -0.45, 0.125, 1.485);
+}
+
+.polaroid:nth-child(2n) {
+	transform: scale(0.9) rotate(-2deg);
+}
+.polaroid:nth-child(3n) {
+	transform: scale(0.9) rotate(2deg);
+}
+.polaroid:nth-child(5n) {
+	transform: scale(0.9) rotate(4deg);
+}
+.polaroid:nth-child(7n) {
+	transform: scale(0.9) rotate(3deg);
+}
+.polaroid:nth-child(11n) {
+	transform: scale(0.9) rotate(-5deg);
+}
+.polaroid:nth-child(13n) {
+	transform: scale(0.9) rotate(1deg);
+}
+.polaroid:nth-child(17n) {
+	transform: scale(0.9) rotate(-1deg);
+}
+.polaroid:nth-child(2n + 1) {
+	transform: scale(0.9) rotate(-3deg);
+}
+.polaroid:nth-child(3n + 2) {
+	transform: scale(0.9) rotate(2deg);
+}
+.polaroid:nth-child(5n + 3) {
+	transform: scale(0.9) rotate(-2deg);
+}
+.polaroid:nth-child(7n + 5) {
+	transform: scale(0.9) rotate(-4deg);
+}
+.polaroid:nth-child(11n + 7) {
+	transform: scale(0.9) rotate(5deg);
+}
+.polaroid:nth-child(13n + 11) {
+	transform: scale(0.9) rotate(2deg);
+}
+.polaroid:nth-child(17n + 13) {
+	transform: scale(0.9) rotate(1deg);
+}
+
+.polaroid:hover {
+	transform: scale(1.1) rotate(0);
+}
+
+.polaroid img {
+	filter: blur(1px);
+	transition: 250ms 100ms ease-out;
+}
+
+.polaroid:hover img {
+	filter: blur(0);
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Oefening</title>
+  <style>
+    .teaser {
+      max-width: 800px;
+      margin: 2rem auto;
+      display: block;
+      text-decoration: none;
+      color: white;
+      background-color: rgb(48, 48, 48);
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      box-shadow: 0px 0px 10px rbga(0, 0, 0, 0.7);
+      transform: 250ms 0ms ease-out;
+      /* 
+
+          Geef dit item een afgeronde rand van ".5rem".
+          Geef dit item een schaduw van 10px blur en een transparante zwarte kleur.
+          Geef dit item een transitie van 250ms met een timing function van "ease-out".
+        
+         */
+    }
+
+    .teaser:hover {
+      background-color: tomato;
+    }
+
+    .teaser .image {
+      width: 250px;
+      height: 250px;
+      float: left;
+      overflow: hidden;
+    }
+
+    .teaser img {
+      transform: 250ms 0ms ease-out;
+      filter: contrast(150%) brightness(110%) grayscale(100%);
+      /* 
+          Geef dit item een transitie van 250ms met een timing function van "ease-out".
+          Geef dit item meer 50% meer contrast, 10% meer helderheid en maak het volledig zwart-wit.
+         */
+    }
+
+    .teaser:hover img {
+      transform: rotate(5deg) scale(1.3);
+      filter: none;
+      /* 
+          Draai het item met 5 graden en maak het 30% groter.
+          Verwijder de filters die je toegevoegd hebt hierboven.
+         */
+    }
+
+    .teaser .content {
+      height: 250px;
+      box-sizing: border-box;
+      padding: 2rem 2rem 2rem calc(250px + 2rem);
+    }
+  </style>
+</head>
+
+<body>
+  <a class="teaser">
+    <div class="image">
+      <img src="https://picsum.photos/250/250" alt="Teaser Image">
+    </div>
+    <div href="#" class="content">
+
+      <h1>Teaser content</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam natus voluptas sunt ea! Voluptate minima
+        explicabo laudantium deserunt fugiat, ipsum optio, pariatur debitis nostrum atque culpa odit suscipit porro!
+        In.</p>
+    </div>
+  </a>
+</body>
+
+</html>
