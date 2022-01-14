@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Oefeningen</title>
+		<style>
+			h1:not(:first-child) {
+				margin-top: 4rem;
+			}
+
+			/* OEFENING RELATIVE */
+			.oefening-relative {
+				border: 1px solid red;
+				display: inline-block;
+			}
+
+			/* Duw enkel de afbeelding met 2rem naar rechts en naar onderen. */
+			.oefening-relative img {
+				vertical-align: top;
+				position: relative;
+				top: 2rem;
+				left: 2rem;
+			}
+
+			/* OEFENING ABSOLUTE */
+			/* Plaats het kleine blokje in de rechter-onderhoek van de grotere blok. */
+			.oefening-absolute {
+				background-color: tomato;
+				color: white;
+				padding: 1rem;
+				max-width: 500px;
+				position: relative;
+			}
+
+			.oefening-absolute .child {
+				background-color: darkolivegreen;
+				padding: 1rem;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+
+			/* OEFENING FIXED */
+			/* Plaats het blokje altijd onderaan de pagina in het midden op de halve pagina breedte! */
+			/* Tip: Je kan 50% van de linkerkant gebruiken en met een transform kan je de
+          de blok 50% terug in de andere richting verplaatsen om hem in het midden te krijgen
+       */
+			.oefening-fixed {
+				background-color: coral;
+				padding: 1rem;
+				color: white;
+				width: 50%;
+				position: fixed;
+				bottom: 0;
+				left: 25%;
+				right: 25%;
+			}
+
+			/* OEFENING STICKY */
+			/* De h2 moet op .5rem van de bovenkant blijven plakken bij het scrollen */
+			.oefening-sticky h2 {
+				background-color: grey;
+				color: white;
+				position: sticky;
+				top: 0.5rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>Oefening Relative</h1>
+		<p>Duw de afbeelding met 2rem naar rechts en naar onderen.</p>
+		<div class="oefening-relative">
+			<img src="https://picsum.photos/200/300" alt="Oefening Relative" />
+		</div>
+
+		<h1>Oefening Absolute</h1>
+		<p>Plaats het kleine blokje in de rechter-onderhoek van de grotere blok.</p>
+		<div class="oefening-absolute">
+			<p>Groter blokje!</p>
+			<div class="child">Klein blokje!</div>
+		</div>
+
+		<h1>Oefening Fixed</h1>
+		<p>Plaats het blokje altijd onderaan de pagina in het midden op de halve pagina breedte!</p>
+		<div class="oefening-fixed">Deze blok staan onderaan!</div>
+
+		<h1>Oefening Sticky</h1>
+		<p>De h2 moet op .5rem van de bovenkant blijven plakken bij het scrollen</p>
+		<div class="oefening-sticky">
+			<h2>Titel</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi asperiores itaque corporis sequi! Inventore
+				dolorum, natus sapiente numquam expedita odio beatae quidem quae quibusdam fugit doloremque nulla, amet porro
+				ipsam.
+			</p>
+			<p>
+				Laborum, dolor neque quae fugit voluptatem explicabo! Quas dolor ipsum, blanditiis aliquid maiores cupiditate
+				eius velit repudiandae commodi voluptatum molestias perferendis. Provident eos necessitatibus cum facilis
+				possimus? Dignissimos, porro id!
+			</p>
+			<p>
+				Quibusdam a voluptas quidem nostrum animi quasi magni necessitatibus praesentium libero illum voluptate illo
+				officia consequuntur, saepe, inventore eveniet consectetur quam explicabo id, qui placeat unde? Veritatis
+				distinctio modi ex?
+			</p>
+			<p>
+				Voluptas labore unde laboriosam debitis necessitatibus rem consequuntur minus tempore non autem accusantium
+				magni ratione, fugit beatae! Quod ipsa officiis aspernatur voluptas, ipsam, optio cumque exercitationem
+				consectetur consequuntur impedit harum.
+			</p>
+			<p>
+				Autem laudantium quis, ex incidunt expedita adipisci nostrum odio consectetur quibusdam, minima eum aut facere
+				assumenda at odit, eligendi repellat quidem debitis fugiat fugit velit consequatur magni illum consequuntur?
+				Placeat.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi asperiores itaque corporis sequi! Inventore
+				dolorum, natus sapiente numquam expedita odio beatae quidem quae quibusdam fugit doloremque nulla, amet porro
+				ipsam.
+			</p>
+			<p>
+				Laborum, dolor neque quae fugit voluptatem explicabo! Quas dolor ipsum, blanditiis aliquid maiores cupiditate
+				eius velit repudiandae commodi voluptatum molestias perferendis. Provident eos necessitatibus cum facilis
+				possimus? Dignissimos, porro id!
+			</p>
+			<p>
+				Quibusdam a voluptas quidem nostrum animi quasi magni necessitatibus praesentium libero illum voluptate illo
+				officia consequuntur, saepe, inventore eveniet consectetur quam explicabo id, qui placeat unde? Veritatis
+				distinctio modi ex?
+			</p>
+			<p>
+				Voluptas labore unde laboriosam debitis necessitatibus rem consequuntur minus tempore non autem accusantium
+				magni ratione, fugit beatae! Quod ipsa officiis aspernatur voluptas, ipsam, optio cumque exercitationem
+				consectetur consequuntur impedit harum.
+			</p>
+			<p>
+				Autem laudantium quis, ex incidunt expedita adipisci nostrum odio consectetur quibusdam, minima eum aut facere
+				assumenda at odit, eligendi repellat quidem debitis fugiat fugit velit consequatur magni illum consequuntur?
+				Placeat.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi asperiores itaque corporis sequi! Inventore
+				dolorum, natus sapiente numquam expedita odio beatae quidem quae quibusdam fugit doloremque nulla, amet porro
+				ipsam.
+			</p>
+			<p>
+				Laborum, dolor neque quae fugit voluptatem explicabo! Quas dolor ipsum, blanditiis aliquid maiores cupiditate
+				eius velit repudiandae commodi voluptatum molestias perferendis. Provident eos necessitatibus cum facilis
+				possimus? Dignissimos, porro id!
+			</p>
+			<p>
+				Quibusdam a voluptas quidem nostrum animi quasi magni necessitatibus praesentium libero illum voluptate illo
+				officia consequuntur, saepe, inventore eveniet consectetur quam explicabo id, qui placeat unde? Veritatis
+				distinctio modi ex?
+			</p>
+			<p>
+				Voluptas labore unde laboriosam debitis necessitatibus rem consequuntur minus tempore non autem accusantium
+				magni ratione, fugit beatae! Quod ipsa officiis aspernatur voluptas, ipsam, optio cumque exercitationem
+				consectetur consequuntur impedit harum.
+			</p>
+			<p>
+				Autem laudantium quis, ex incidunt expedita adipisci nostrum odio consectetur quibusdam, minima eum aut facere
+				assumenda at odit, eligendi repellat quidem debitis fugiat fugit velit consequatur magni illum consequuntur?
+				Placeat.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi asperiores itaque corporis sequi! Inventore
+				dolorum, natus sapiente numquam expedita odio beatae quidem quae quibusdam fugit doloremque nulla, amet porro
+				ipsam.
+			</p>
+			<p>
+				Laborum, dolor neque quae fugit voluptatem explicabo! Quas dolor ipsum, blanditiis aliquid maiores cupiditate
+				eius velit repudiandae commodi voluptatum molestias perferendis. Provident eos necessitatibus cum facilis
+				possimus? Dignissimos, porro id!
+			</p>
+			<p>
+				Quibusdam a voluptas quidem nostrum animi quasi magni necessitatibus praesentium libero illum voluptate illo
+				officia consequuntur, saepe, inventore eveniet consectetur quam explicabo id, qui placeat unde? Veritatis
+				distinctio modi ex?
+			</p>
+			<p>
+				Voluptas labore unde laboriosam debitis necessitatibus rem consequuntur minus tempore non autem accusantium
+				magni ratione, fugit beatae! Quod ipsa officiis aspernatur voluptas, ipsam, optio cumque exercitationem
+				consectetur consequuntur impedit harum.
+			</p>
+			<p>
+				Autem laudantium quis, ex incidunt expedita adipisci nostrum odio consectetur quibusdam, minima eum aut facere
+				assumenda at odit, eligendi repellat quidem debitis fugiat fugit velit consequatur magni illum consequuntur?
+				Placeat.
+			</p>
+		</div>
+	</body>
+</html>

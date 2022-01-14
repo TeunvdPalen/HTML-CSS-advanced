@@ -1,0 +1,19 @@
+.container {
+	background-color: turquoise;
+	display: flex;
+	flex-direction: row;
+	height: 400px;
+	/* Main axis uitlijnen */
+	justify-content: space-evenly;
+
+	/* Cross axis uitlijnen (default = stretch) */
+	align-items: center;
+}
+
+.div1,.div2,.div3,.div4{
+	background-color: tomato;
+}
+
+.div3{
+	align-self: flex-end;
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Oefening Position</title>
+		<style>
+			body {
+				/* Padding-top om de navigatie balk te compenseren */
+				padding-top: 2.5rem;
+			}
+
+			.container {
+				max-width: 80%;
+				margin: auto;
+			}
+
+			/* Zet de main-nav vast geplaatst bovenaan de pagina op de volledige breedte
+         en zorg dat de nav op een hoge "laag" ligt, bovenop de rest.
+       */
+			.main-nav {
+				background-color: lightgray;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 10;
+			}
+
+			.main-nav ul {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+
+			.main-nav li {
+				float: left;
+				margin: 1rem;
+			}
+
+			/* DIT MAG JE NOG NEGEREN! DIT LEER JE IN HET VOLGENDE HOOFDSTUK. */
+			.flex {
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+			}
+
+			.main-content {
+				width: 60%;
+			}
+
+			/* De titel ga je gewoon 5% naar links duwen zodat hij "uit" de container komt */
+			.main-content h1 {
+				background-color: dimgray;
+				color: white;
+				box-sizing: border-box;
+				padding: 1rem 1rem 1rem 5%;
+				margin-top: 2rem;
+				position: relative;
+				width: 105%;
+				right: 5%;
+			}
+
+			/* De sidebar moet op 4rem aan de bovenkant blijven plakken als je scrollt */
+			.sidebar {
+				width: 35%;
+				background-color: grey;
+				padding: 1rem;
+				margin-top: 2rem;
+				box-sizing: border-box;
+				color: white;
+				position: sticky;
+				top: 4rem;
+			}
+
+			/* De sidebar moet je op 2rem onder de blok en aan de rechterkant plaatsen */
+			.sidebar h1 {
+				color: red;
+				font-size: 1rem;
+				font-style: italic;
+				position: absolute;
+				bottom: -2rem;
+				right: 0;
+			}
+
+			/* De back-to-top wordt vastgeplakt onderaan de pagina op 1rem verwijderd aan de onderkant en de rechterkant */
+			.back-to-top {
+				background-color: dimgrey;
+				color: white;
+				padding: 1rem;
+				text-decoration: none;
+				position: fixed;
+				bottom: 1rem;
+				right: 1rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="main-nav">
+			<div class="container">
+				<ul>
+					<li><a href="#">Knop</a></li>
+					<li><a href="#">Knop</a></li>
+					<li><a href="#">Knop</a></li>
+					<li><a href="#">Knop</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container flex">
+			<div class="main-content">
+				<h1>Page title</h1>
+				<p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates repudiandae nihil est cum labore
+					similique impedit sed exercitationem quasi, nisi suscipit enim ex cumque accusantium sit voluptatem quae
+					perspiciatis maxime?
+				</p>
+				<p>
+					Iste natus inventore nam pariatur alias, laudantium, corrupti minus provident necessitatibus autem laboriosam
+					aut! Beatae corrupti ipsam aspernatur sit perspiciatis neque, doloremque sunt qui natus, ipsum animi vero
+					doloribus odit.
+				</p>
+				<p>
+					Odio laudantium magnam tenetur, consequatur nobis suscipit minima totam expedita voluptatibus laboriosam
+					facere ullam tempora rerum, vitae, quae tempore perferendis quia hic eligendi quidem autem animi sed maiores!
+					Expedita, optio!
+				</p>
+				<p>
+					Voluptas, pariatur illo ducimus soluta ab maxime sunt praesentium quasi nemo incidunt suscipit, ullam tempora,
+					cumque minus aut aliquam laborum ratione repellat cupiditate magni error? Incidunt ipsum vel id error.
+				</p>
+				<p>
+					Rem totam voluptatibus, in nulla dignissimos soluta assumenda sint laborum aut nihil necessitatibus
+					perferendis dolores distinctio a ea inventore deleniti id vitae aperiam! Laboriosam, nulla iure. Aspernatur
+					ratione sed ab.
+				</p>
+				<p>
+					Nisi blanditiis amet voluptatibus commodi a iusto alias aliquam perferendis. Voluptates libero illum sint fuga
+					adipisci natus delectus nihil aspernatur necessitatibus dolores vel laboriosam earum, doloremque deleniti est
+					reprehenderit ea.
+				</p>
+				<p>
+					Error delectus deserunt et architecto distinctio voluptates dolorum doloremque assumenda similique doloribus
+					cupiditate vitae, quae tenetur maiores excepturi eaque dolor, asperiores dolores possimus eum ipsa animi
+					explicabo laudantium praesentium! Exercitationem?
+				</p>
+				<p>
+					Ad, debitis odio. Doloribus harum excepturi necessitatibus reprehenderit ullam ducimus laborum quae molestias
+					sequi veritatis aperiam quos ipsum aliquid fugit quibusdam optio mollitia tempora accusantium, nam eaque
+					exercitationem praesentium labore.
+				</p>
+				<p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates repudiandae nihil est cum labore
+					similique impedit sed exercitationem quasi, nisi suscipit enim ex cumque accusantium sit voluptatem quae
+					perspiciatis maxime?
+				</p>
+				<p>
+					Iste natus inventore nam pariatur alias, laudantium, corrupti minus provident necessitatibus autem laboriosam
+					aut! Beatae corrupti ipsam aspernatur sit perspiciatis neque, doloremque sunt qui natus, ipsum animi vero
+					doloribus odit.
+				</p>
+				<p>
+					Odio laudantium magnam tenetur, consequatur nobis suscipit minima totam expedita voluptatibus laboriosam
+					facere ullam tempora rerum, vitae, quae tempore perferendis quia hic eligendi quidem autem animi sed maiores!
+					Expedita, optio!
+				</p>
+				<p>
+					Voluptas, pariatur illo ducimus soluta ab maxime sunt praesentium quasi nemo incidunt suscipit, ullam tempora,
+					cumque minus aut aliquam laborum ratione repellat cupiditate magni error? Incidunt ipsum vel id error.
+				</p>
+				<p>
+					Rem totam voluptatibus, in nulla dignissimos soluta assumenda sint laborum aut nihil necessitatibus
+					perferendis dolores distinctio a ea inventore deleniti id vitae aperiam! Laboriosam, nulla iure. Aspernatur
+					ratione sed ab.
+				</p>
+				<p>
+					Nisi blanditiis amet voluptatibus commodi a iusto alias aliquam perferendis. Voluptates libero illum sint fuga
+					adipisci natus delectus nihil aspernatur necessitatibus dolores vel laboriosam earum, doloremque deleniti est
+					reprehenderit ea.
+				</p>
+				<p>
+					Error delectus deserunt et architecto distinctio voluptates dolorum doloremque assumenda similique doloribus
+					cupiditate vitae, quae tenetur maiores excepturi eaque dolor, asperiores dolores possimus eum ipsa animi
+					explicabo laudantium praesentium! Exercitationem?
+				</p>
+				<p>
+					Ad, debitis odio. Doloribus harum excepturi necessitatibus reprehenderit ullam ducimus laborum quae molestias
+					sequi veritatis aperiam quos ipsum aliquid fugit quibusdam optio mollitia tempora accusantium, nam eaque
+					exercitationem praesentium labore.
+				</p>
+				<p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates repudiandae nihil est cum labore
+					similique impedit sed exercitationem quasi, nisi suscipit enim ex cumque accusantium sit voluptatem quae
+					perspiciatis maxime?
+				</p>
+				<p>
+					Iste natus inventore nam pariatur alias, laudantium, corrupti minus provident necessitatibus autem laboriosam
+					aut! Beatae corrupti ipsam aspernatur sit perspiciatis neque, doloremque sunt qui natus, ipsum animi vero
+					doloribus odit.
+				</p>
+				<p>
+					Odio laudantium magnam tenetur, consequatur nobis suscipit minima totam expedita voluptatibus laboriosam
+					facere ullam tempora rerum, vitae, quae tempore perferendis quia hic eligendi quidem autem animi sed maiores!
+					Expedita, optio!
+				</p>
+				<p>
+					Voluptas, pariatur illo ducimus soluta ab maxime sunt praesentium quasi nemo incidunt suscipit, ullam tempora,
+					cumque minus aut aliquam laborum ratione repellat cupiditate magni error? Incidunt ipsum vel id error.
+				</p>
+				<p>
+					Rem totam voluptatibus, in nulla dignissimos soluta assumenda sint laborum aut nihil necessitatibus
+					perferendis dolores distinctio a ea inventore deleniti id vitae aperiam! Laboriosam, nulla iure. Aspernatur
+					ratione sed ab.
+				</p>
+				<p>
+					Nisi blanditiis amet voluptatibus commodi a iusto alias aliquam perferendis. Voluptates libero illum sint fuga
+					adipisci natus delectus nihil aspernatur necessitatibus dolores vel laboriosam earum, doloremque deleniti est
+					reprehenderit ea.
+				</p>
+				<p>
+					Error delectus deserunt et architecto distinctio voluptates dolorum doloremque assumenda similique doloribus
+					cupiditate vitae, quae tenetur maiores excepturi eaque dolor, asperiores dolores possimus eum ipsa animi
+					explicabo laudantium praesentium! Exercitationem?
+				</p>
+				<p>
+					Ad, debitis odio. Doloribus harum excepturi necessitatibus reprehenderit ullam ducimus laborum quae molestias
+					sequi veritatis aperiam quos ipsum aliquid fugit quibusdam optio mollitia tempora accusantium, nam eaque
+					exercitationem praesentium labore.
+				</p>
+			</div>
+			<div class="sidebar">
+				<h1>Very cool sidebar</h1>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus modi repudiandae vel tenetur, dolorum obcaecati
+					magnam natus rerum laborum quaerat nisi quidem aut veritatis provident excepturi recusandae facilis facere ex?
+				</p>
+			</div>
+		</div>
+		<a href="#" class="back-to-top">Back to top</a>
+	</body>
+</html>
