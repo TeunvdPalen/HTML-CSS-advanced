@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Oefeningen Flexbox Eigenschappen</title>
+	</head>
+
+	<body>
+		<h1>Oefening 1</h1>
+		<p>
+			Gebruik de juiste flexbox eigenschappen. <br />
+			Zorg ervoor dat de eerste navigatiebalk-knopjes langs elkaar staan. <br />
+			Zorg ervoor dat in de tweede blok onder elkaar staan.
+		</p>
+		<style>
+			.oefening1-deel1,
+			.oefening1-deel2 {
+				background-color: grey;
+				margin: 0.5rem 0;
+				width: 50%;
+				display: flex;
+			}
+
+			.oefening1-deel1 {
+			}
+
+			.oefening1-deel2 {
+				flex-direction: column;
+			}
+		</style>
+		<nav class="oefening1-deel1">
+			<a href="#">Knop 1</a>
+			<a href="#">Knop 2</a>
+			<a href="#">Knop 3</a>
+			<a href="#">Knop 4</a>
+		</nav>
+		<nav class="oefening1-deel2">
+			<a href="#">Knop 1</a>
+			<a href="#">Knop 2</a>
+			<a href="#">Knop 3</a>
+			<a href="#">Knop 4</a>
+		</nav>
+
+		<h1>Oefening 2</h1>
+		<p>Zorg ervoor dat de tekst in het midden van de blok komt te staan.</p>
+		<style>
+			.oefening2 {
+				width: 50%;
+				height: 300px;
+				background-color: lightgray;
+				font-size: 2rem;
+				color: tomato;
+				padding: 1rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
+		<div class="oefening2">
+			<p>Gecentreerd!</p>
+		</div>
+
+		<h1>Oefening 3</h1>
+		<p>Zorg ervoor dat de items op meerdere rijen kunnen staan.</p>
+		<style>
+			.oefening3 {
+				background-color: lightgray;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.oefening3 div {
+				width: calc(50% - 1rem);
+				box-sizing: border-box;
+				padding: 1rem;
+				margin: 0.5rem;
+				background-color: grey;
+			}
+		</style>
+		<div class="oefening3">
+			<div>Item 1</div>
+			<div>Item 2</div>
+			<div>Item 3</div>
+			<div>Item 4</div>
+			<div>Item 5</div>
+			<div>Item 6</div>
+		</div>
+
+		<h1>Oefening 4</h1>
+		<p>Zorg ervoor dat het derde item als eerste komt te staan, en dat het eerste item als laatste komt te staan.</p>
+		<style>
+			.oefening4 {
+				background-color: grey;
+				padding: 1rem;
+				width: 50%;
+				display: flex;
+			}
+
+			.oefening4 div:nth-child(3) {
+				order: -1;
+			}
+
+			.oefening4 div:nth-child(1) {
+				order: 1;
+			}
+		</style>
+		<div class="oefening4">
+			<div>Item 1</div>
+			<div>Item 2</div>
+			<div>Item 3</div>
+			<div>Item 4</div>
+			<div>Item 5</div>
+			<div>Item 6</div>
+		</div>
+
+		<h1>Oefening 5</h1>
+		<p>
+			Zorg ervoor dat alle items de volledige ruimte benutten en dat het tweede item twee keren zoveel overgebleven
+			ruimte kan innemen.
+		</p>
+		<p>Zorg er ook voor dat het vierde item een width van 150px heeft en dat deze width altijd behouden wordt!</p>
+		<style>
+			.oefening5 {
+				background-color: grey;
+				padding: 1rem;
+				width: 50%;
+				display: flex;
+			}
+
+			.oefening5 div {
+				background-color: lightgray;
+				border: 1px solid grey;
+				padding: 0.5rem;
+				box-sizing: border-box;
+				flex-grow: 1;
+			}
+
+			.oefening5 div:nth-child(2) {
+				flex-grow: 2;
+			}
+
+			.oefening5 div:nth-child(4) {
+				flex-shrink: 0;
+				width: 150px;
+			}
+		</style>
+		<div class="oefening5">
+			<div>Item 1</div>
+			<div>Item 2</div>
+			<div>Item 3</div>
+			<div>Item 4</div>
+			<div>Item 5</div>
+			<div>Item 6</div>
+		</div>
+	</body>
+</html>

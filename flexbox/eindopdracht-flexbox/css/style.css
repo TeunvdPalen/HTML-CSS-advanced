@@ -1,0 +1,196 @@
+ @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Lato:100,100i,300,300i,400,400i,700,700i,900,900i'); 
+ @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 100%;
+  line-height: 1rem;
+  font-family: Lato, sans-serif;
+  color: #9b9b9b;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+/* 
+Positioneer de main header absoluut op 2rem van de bovenkant.
+Voorzie ook dat hij de volledige breedte inneemt.
+*/
+.main-header {
+  width: 100%;
+  position: absolute;
+  top: 2rem;
+}
+
+/* 
+De elementen van de container in de main header moeten verdeeld worden over de volledige breedte van het element.
+Ze moeten ook verticaal gecentreerd worden.
+*/
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Kaushan Script', cursive;
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* 
+De elementen van de social nav moeten langs elkaar komen te staan.
+*/
+.social-nav {
+  display: inline-flex;
+}
+/* 
+De links in de social nav moeten een witte rand hebben en deze moet volledig afgerond zijn tot een cirkel.
+*/
+.social-nav a {
+  color: white;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  margin: 0 .5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+/* 
+Het eerste kind moet geen linker-marge krijgen.
+Het laaste kind moet geen rechter-marge krijgen.
+*/
+.social-nav a:first-child {
+  margin-left: 10px;
+}
+.social-nav a:last-child {
+  margin-right: 10px;
+}
+
+/* 
+De banner elementen moeten onder elkaar in het midden van het element komen te staan.
+*/
+.banner {
+  background-image: url('../images/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  overflow: hidden;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.banner-title {
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-weight: 900;
+}
+
+.banner-subtitle {
+  font-weight: 300;
+}
+
+.photos-section {
+  background-color: #eee;
+  padding: 4rem 0;
+}
+
+/* 
+De elementen in het photo-grid moeten langs elkaar komen te staan en op meerdere rijen.
+ */
+.photo-grid {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo {
+  width: calc(25% - 1rem);
+  margin: .5rem;
+}
+
+.photo img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.photo-image {
+  position: relative;
+}
+
+/* 
+De photo-likes moeten absoluut gepositioneerd worden binnen het photo-image element.
+Het moet komen te staan op 1rem van de onderkant en 1rem van de linkerkant.
+*/
+.photo-likes {
+  color: white;
+  margin: 0;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.photo-info {
+  background-color: white;
+  padding: 1rem;
+  color: #565d64;
+  line-height: 1.5rem;
+}
+
+.photo-info p {
+  margin: 0;
+}
+
+.title-small {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .25rem;
+  text-align: center;
+}
+
+.title-large {
+  color: #565d64;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.section {
+  padding: 4rem 0;
+  text-align: center;
+}
+.section .container {
+  width: 600px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #565d64;
+  color: white;
+  padding: .5rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
+.main-footer {
+  border-top: 1px solid #eeeeee;
+  padding: 2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
