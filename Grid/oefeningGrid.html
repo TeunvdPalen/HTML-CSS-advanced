@@ -50,7 +50,11 @@
       padding: .25rem;
       color: white;
       display: grid;
-      grid-template: repeat(3, 1fr) / 50% 50%;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        'header header'
+        'sidebar content'
+        'footer footer';
     }
 
     .grid-item>* {
@@ -59,20 +63,22 @@
 
     .grid-item header {
       background-color: orange;
-      grid-column: 1 / -1;
+      grid-area: header;
     }
 
     .grid-item div {
       background-color: purple;
+      grid-area: sidebar;
     }
 
     .grid-item aside {
       background-color: green;
+      grid-area: content;
     }
 
     .grid-item footer {
       background-color: blue;
-      grid-column: 1 / -1;
+      grid-area: footer;
     }
   </style>
   <div class="grid">
