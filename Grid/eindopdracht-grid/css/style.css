@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 
+Het body element wordt een Grid.
+We maken twee rijen van 4rem hoog en 600px hoog.
+*/
+body {
+	margin: 0;
+	font-size: 100%;
+	line-height: 1rem;
+	font-family: Lato, sans-serif;
+	color: #9b9b9b;
+	display: grid;
+	grid-template-rows: 4rem 600px;
+}
+
+/* 
+Elk kind van het body wordt in de eerste kolom geplaatst
+*/
+body > * {
+	grid-column: 1;
+}
+
+.container {
+	width: 1000px;
+	margin: auto;
+}
+
+/* 
+De main header laten we op de eerste rij van het body grid terecht komen.
+We geven ook een z-index van 2 zodat het element boven de banner komt te liggen.
+*/
+.main-header {
+	margin-top: 4rem;
+	grid-row: 1;
+	z-index: 2;
+}
+
+/* 
+De container van de main header kunnen we ook als grid weergeven.
+We maken twee kolommen waarbij de breedte automatisch berekend wordt.
+De inhoud van het grid wordt dan verdeeld over de breedte.
+*/
+.main-header .container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.logo {
+	font-family: 'Kaushan Script', cursive;
+	color: white;
+	margin: 0;
+	font-size: 2rem;
+}
+
+/* 
+De social nav kunnen we vormgeven door er een grid van te maken.
+We laten de kolommen automatisch genereren (ipv de standaard rijen).
+Dan moet er een tussenscheiding zijn van .5rem.
+*/
+.social-nav {
+	display: grid;
+	grid-auto-flow: column;
+	grid-column-gap: 0.5rem;
+}
+
+.social-nav a {
+	color: white;
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	text-align: center;
+	line-height: 2rem;
+}
+
+/* 
+De banner plaatsen we op de eerste rij van het body-grid maar we laten hem twee rijen innemen.
+Dan wordt de banner zelf ook nog een grid waarbij de inhoud verticaal en horizontaal gecentreerd wordt.
+*/
+.banner {
+	background-image: url('../images/header-bg.jpg');
+	background-size: cover;
+	background-position: center;
+	min-height: 600px;
+	overflow: hidden;
+	color: white;
+	font-size: 1.5em;
+	text-align: center;
+
+	grid-row: 1 / 3;
+
+	display: grid;
+	align-content: center;
+	justify-content: center;
+}
+
+.banner-title {
+	text-transform: uppercase;
+	margin-bottom: 0;
+	font-weight: 900;
+}
+
+.banner-subtitle {
+	font-weight: 300;
+}
+
+.photos-section {
+	background-color: #eee;
+	padding: 4rem 0;
+}
+
+/* 
+Het photo grid wordt een grid met vier gelijke kolommen en een tussenruimte van 1rem.
+*/
+.photo-grid {
+	margin-top: 4rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1rem;
+}
+
+/* 
+We hebben de HTML van het photo element vereenvoudigd en de .photo-image div ertussenuit gehaald.
+We kunnen nu van het photo element een grid maken.
+*/
+.photo {
+	display: grid;
+}
+
+/* 
+We plaatsen elk kind-element van de photo in de eerste kolom.
+ */
+.photo > * {
+	grid-column: 1;
+}
+
+/* 
+De afbeelding mag op de eerste rij staan maar twee rijen innemen.
+*/
+.photo-image {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	grid-row: 1 / 3;
+}
+
+/* 
+De likes mogen op de tweede rij staan. Zo komen ze bovenop de afbeelding te staan.
+*/
+.photo-likes {
+	color: white;
+	margin: 0;
+	padding: 1rem;
+	grid-row: 2;
+}
+
+.photo-info {
+	background-color: white;
+	padding: 1rem;
+	color: #565d64;
+	line-height: 1.5rem;
+}
+
+.photo-info p {
+	margin: 0;
+}
+
+.title-small {
+	text-transform: uppercase;
+	font-size: 1rem;
+	letter-spacing: 0.25rem;
+	text-align: center;
+}
+
+.title-large {
+	color: #565d64;
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+
+.section {
+	padding: 4rem 0;
+	text-align: center;
+}
+.section .container {
+	width: 600px;
+}
+
+.button {
+	display: inline-block;
+	background-color: #565d64;
+	color: white;
+	padding: 0.5rem 2rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 2rem 0;
+}
+
+.main-footer {
+	border-top: 1px solid #eeeeee;
+	padding: 2rem 0;
+	text-align: center;
+	text-transform: uppercase;
+}

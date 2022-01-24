@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Oefening Grid</title>
+</head>
+
+<body>
+
+  <h1>Grid oefening</h1>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* 
+        Het grid bestaat uit vier kolommen van 150px. Gebruik hiervoor de repeat() functie.
+        Elke aangemaakte rij moet automatisch 150px hoog worden.
+        Er moet een 1rem tussenruimte zijn.
+        De inhoud van het grid moet verticaal en horizontaal gecentreerd zijn.
+        Elke cel van het grid moet zelf ook de inhoud verticaal en horizontaal gecentreerd hebben.
+      */
+    .grid {
+      background-color: lightgray;
+      padding: 1rem;
+      height: 600px;
+      width: 800px;
+      display: grid;
+      grid-template-columns: repeat(4, 150px);
+      grid-auto-rows: 150px;
+      grid-gap: 1rem;
+      justify-content: center;
+      align-content: center;
+      justify-items: center;
+      align-items: center;
+    }
+
+    /* 
+        Een grid item zelf bestaat ook uit een grid. 
+        Je maakt een grid area voor de header, content, sidebar en footer.
+        De header en footer moeten het volledige grid innemen.
+        De content en sidebar staan langs elkaar.
+        Wij elk elemenent toe aan zijn grid area.
+      */
+    .grid-item {
+      background-color: grey;
+      padding: .25rem;
+      color: white;
+      display: grid;
+      grid-template: repeat(3, 1fr) / 50% 50%;
+    }
+
+    .grid-item>* {
+      padding: .5rem;
+    }
+
+    .grid-item header {
+      background-color: orange;
+      grid-column: 1 / -1;
+    }
+
+    .grid-item div {
+      background-color: purple;
+    }
+
+    .grid-item aside {
+      background-color: green;
+    }
+
+    .grid-item footer {
+      background-color: blue;
+      grid-column: 1 / -1;
+    }
+  </style>
+  <div class="grid">
+    <div class="grid-item">
+      <header>Header</header>
+      <div>Content</div>
+      <aside>Sidebar</aside>
+      <footer>Footer</footer>
+    </div>
+    <div class="grid-item">
+      <header>Header</header>
+      <div>Content</div>
+      <aside>Sidebar</aside>
+      <footer>Footer</footer>
+    </div>
+    <div class="grid-item">
+      <header>Header</header>
+      <div>Content</div>
+      <aside>Sidebar</aside>
+      <footer>Footer</footer>
+    </div>
+    <div class="grid-item">
+      <header>Header</header>
+      <div>Content</div>
+      <aside>Sidebar</aside>
+      <footer>Footer</footer>
+    </div>
+    <div class="grid-item">
+      <header>Header</header>
+      <div>Content</div>
+      <aside>Sidebar</aside>
+      <footer>Footer</footer>
+    </div>
+    <div class="grid-item">
+      <header>Header</header>
+      <div>Content</div>
+      <aside>Sidebar</aside>
+      <footer>Footer</footer>
+    </div>
+    <div class="grid-item">
+      <header>Header</header>
+      <div>Content</div>
+      <aside>Sidebar</aside>
+      <footer>Footer</footer>
+    </div>
+    <div class="grid-item">
+      <header>Header</header>
+      <div>Content</div>
+      <aside>Sidebar</aside>
+      <footer>Footer</footer>
+    </div>
+  </div>
+</body>
+
+</html>
