@@ -1,0 +1,46 @@
+body {
+	margin: 0;
+	font-family: Helvetica, sans-serif;
+	font-size: 15px;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1.5rem;
+}
+
+header {
+	background: #E6F3FF;
+}
+
+header .container {
+	grid-template-columns: 1fr 1fr;
+}
+
+.navigatie {
+	display: none;
+}
+
+footer {
+	background: lightseagreen;
+}
+
+@media screen and (min-width: 900px) {
+	.main .container, footer .container {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.gallery {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1rem;
+	}
+}
