@@ -50,7 +50,8 @@ De inhoud van het grid wordt dan verdeeld over de breedte.
 */
 .main-header .container {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(2, auto);
+	justify-content: space-between;
 }
 
 .logo {

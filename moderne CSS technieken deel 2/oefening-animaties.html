@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Oefening Animaties</title>
+  <style>
+    body {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* Maak een animatie die TranslateX gebruikt.
+        Je gaat van 0 naar -10% naar 10% en terug naar 0.
+       */
+    @keyframes wobble {
+      from {
+        transform: translateX(-10%);
+      }
+
+      50% {
+        transform: translateX(10%);
+      }
+
+      to {
+        transform: translateX(0%);
+      }
+    }
+
+    /* Maak een animatie die de achtergrond kleur veranderd.
+        Je gaat van lightgrey naar rgb(168, 137, 137) naar rgb(157, 185, 168) naar rgb(158, 153, 185) en terug naar lightgrey.
+       */
+    @keyframes background-color-fade {
+      from {
+        background-color: lightgrey;
+      }
+
+      25% {
+        background-color: rgb(168, 137, 137);
+      }
+
+      50% {
+        background-color: rgb(157, 185, 168);
+      }
+
+      75% {
+        background-color: rgb(158, 153, 185);
+      }
+
+      to {
+        background-color: lightgrey;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Oefening animaties</h1>
+  <p></p>
+  <style>
+    .oefening-animaties {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+    }
+
+    .oefening-animaties section {
+      background: lightgray;
+      padding: 1rem;
+      position: relative;
+      border: 1px solid dimgray;
+    }
+
+    /* Pas de wobble animatie toe voor 250ms met een ease-in-out. De animatie loopt maar 1 keer.
+        Pas ook de background-color-fade animatie toe voor 10s. De animatie blijft oneindig doorlopen zolang we met de muis erover blijven. */
+    .oefening-animaties section:hover {
+      z-index: 1;
+      animation: wobble 250ms ease-in-out 0s 1, background-color-fade 10s ease-in-out 0s infinite;
+    }
+  </style>
+  <div class="oefening-animaties">
+    <section> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis totam consequatur modi dignissimos
+      voluptate ut laudantium quis laboriosam, excepturi nihil officiis ad aut dolorem commodi facere illo sequi,
+      temporibus nisi. </section>
+    <section> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis totam consequatur modi dignissimos
+      voluptate ut laudantium quis laboriosam, excepturi nihil officiis ad aut dolorem commodi facere illo sequi,
+      temporibus nisi. </section>
+    <section> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis totam consequatur modi dignissimos
+      voluptate ut laudantium quis laboriosam, excepturi nihil officiis ad aut dolorem commodi facere illo sequi,
+      temporibus nisi. </section>
+    <section> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis totam consequatur modi dignissimos
+      voluptate ut laudantium quis laboriosam, excepturi nihil officiis ad aut dolorem commodi facere illo sequi,
+      temporibus nisi. </section>
+    <section> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis totam consequatur modi dignissimos
+      voluptate ut laudantium quis laboriosam, excepturi nihil officiis ad aut dolorem commodi facere illo sequi,
+      temporibus nisi. </section>
+  </div>
+</body>
+
+</html>

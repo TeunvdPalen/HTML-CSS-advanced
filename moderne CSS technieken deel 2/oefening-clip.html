@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Oefening Clip</title>
+</head>
+
+<body>
+
+  <h1>Oefening 1</h1>
+  <p>Maak een clip path zodat de vorm er iets onregelmatiger uitziet.</p>
+  <p>Maak een transition van 250ms waarbij de vorm naar een gewone rechthoek veranderd bij hover.</p>
+  <style>
+    .oefening1 {
+      width: 300px;
+      height: 300px;
+    }
+
+    .oefening1 img {
+      clip-path: polygon(0 0, 49% 17%, 100% 0, 83% 52%, 100% 100%, 50% 86%, 0 100%, 16% 52%);
+      transition: 250ms;
+    }
+
+    .oefening1:hover img {
+      clip-path: polygon(0 0, 70% 0%, 100% 0, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+
+
+    }
+  </style>
+  <div class="oefening1">
+    <img src="https://picsum.photos/300/300" alt="">
+  </div>
+
+  <h1>Oefening 2</h1>
+  <p>Gebruik de "pattern.svg" om een stuk van de afbeelding te maskeren.</p>
+  <p>Als je over de "oefening2" div hovert gebruik je op de afbeelding de "pattern-hover.svg" afbeelding.</p>
+  <p><em>PS: een transition zal hier niet werken.</em></p>
+  <style>
+    .oefening2 {
+      width: 300px;
+      height: 300px;
+    }
+
+    .oefening2 img {
+      -webkit-mask: url(pattern.svg);
+      transition: 1500ms;
+    }
+
+    .oefening2:hover img {
+      -webkit-mask: url(pattern-hover.svg);
+    }
+  </style>
+  <div class="oefening2">
+    <img src="https://picsum.photos/300/300" alt="">
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Oefening variabelen</title>
+</head>
+<style>
+  /* 
+    Maak drie variabelen zodat het ontwerp aanpasbaar is.
+    - container-width
+    - primary-color
+    - spacing
+    */
+  :root {
+    --container-width: 1200px;
+    --primary-color: seagreen;
+    --spacing: 20px
+  }
+
+  /* 
+      Gebruik de container-width als width.
+      Gebruik de primary color als kleur voor de border.
+      Gebruik de spacing als padding.
+    */
+  .container {
+    width: var(--container-width);
+    margin: auto;
+    border: 4px solid var(--primary-color);
+    padding: var(--spacing);
+  }
+
+  /* 
+      Gebruik de primary color als tekstkleur.
+    */
+  h1 {
+    color: var(--primary-color);
+  }
+</style>
+
+<body>
+  <div class="container">
+
+    <h1>Mijn titel</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde est aliquid expedita facere, quidem mollitia
+      officiis! Impedit, exercitationem. Praesentium dolorem nemo itaque. Accusamus at omnis facere, perferendis
+      dolor laboriosam facilis!</p>
+    <p>Ab facere odit beatae expedita? Dignissimos mollitia architecto aliquam facilis omnis distinctio corrupti
+      placeat, nostrum sit alias reiciendis provident deleniti ea? Nostrum pariatur amet tempora blanditiis tempore.
+      Vel, ratione rem.</p>
+    <p>Iste, eaque sunt eligendi temporibus porro est dolor similique tenetur eum, necessitatibus officia blanditiis.
+      Tempore obcaecati tenetur doloremque eos sit unde, facilis enim quo ut similique quia a impedit eum.</p>
+    <p>Nihil, quae facilis, cum quia eaque qui eligendi omnis porro obcaecati quas doloribus nulla laudantium
+      laborum? Laborum ipsam doloremque aperiam autem maxime dolores nisi. Quis voluptates modi distinctio quo odio.</p>
+  </div>
+</body>
+
+</html>

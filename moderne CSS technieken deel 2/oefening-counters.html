@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Counters</title>
+</head>
+
+<body>
+
+  <h1>Oefening1</h1>
+  <p>Elke section op de pagina heeft een titel. Er moet een automatische nummering komen bij elke titel.</p>
+  <style>
+    /* 
+        Maak een counter met de naam "section" aan.
+      */
+    .oefening1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      counter-reset: section;
+    }
+
+    /* 
+        Elke keer als we een "section" zien gaan we de "section"-counter verhogen.
+      */
+    .oefening1 section {
+      padding: 1rem;
+      border: 1px solid grey;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      counter-increment: section;
+    }
+
+    /*
+        Gebruik de section-counter in het content veld om het nummer als achtergrond te krijgen.
+      */
+    .oefening1 section::before {
+      position: absolute;
+      bottom: -2rem;
+      right: 0;
+      font-size: 10rem;
+      color: rgba(0, 0, 0, 0.075);
+      z-index: -1;
+      content: counter(section) '';
+    }
+
+    /* 
+        Gebruik de section counter in het content veld om het nummer voor de titel te krijgen.
+      */
+    .oefening1 h1::before {
+      content: counter(section) '. ';
+    }
+  </style>
+  <div class="oefening1">
+    <section>
+
+      <h1>Een titel</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque odio praesentium quas est suscipit quasi
+        nostrum, repellat numquam modi necessitatibus dolorem atque facilis! Eos, numquam. Qui, corrupti
+        perspiciatis. Est, quasi.</p>
+    </section>
+    <section>
+
+      <h1>Een titel</h1>
+      <p>Odio quae excepturi ipsum, rem atque, autem voluptas repudiandae, assumenda possimus reiciendis minus quo
+        saepe tempora. Dolor voluptas illum voluptate distinctio! In natus aliquam tenetur consequatur modi odit nemo
+        illo.</p>
+    </section>
+    <section>
+
+      <h1>Een titel</h1>
+      <p>Excepturi autem consequuntur magni sunt enim corporis rerum ipsum deleniti placeat perspiciatis suscipit ad,
+        minus quam vero repudiandae, aperiam qui similique officia assumenda, officiis consectetur a saepe ratione
+        natus. Facere!</p>
+    </section>
+    <section>
+
+      <h1>Een titel</h1>
+      <p>Dolores nemo quia corporis? Sint maxime itaque, recusandae voluptates quaerat beatae ab nisi tenetur? Nisi
+        soluta ea illum, voluptatibus earum aliquid non est quia, officiis expedita consequuntur veritatis corporis
+        quibusdam!</p>
+    </section>
+    <section>
+
+      <h1>Een titel</h1>
+      <p>Obcaecati atque dignissimos vel neque nulla eaque at distinctio deserunt incidunt quod voluptatibus
+        perferendis dolor assumenda, laboriosam sint. Excepturi earum, nulla veritatis minima exercitationem
+        molestias atque totam corporis quos deserunt?</p>
+    </section>
+    <section>
+
+      <h1>Een titel</h1>
+      <p>Possimus velit accusamus quos quisquam odit nesciunt culpa suscipit praesentium nisi, est incidunt eveniet
+        expedita laborum ducimus aperiam aliquam voluptates voluptatibus, obcaecati sapiente veniam dolorem
+        perferendis repellat totam. Hic, corporis!</p>
+    </section>
+  </div>
+</body>
+
+</html>
