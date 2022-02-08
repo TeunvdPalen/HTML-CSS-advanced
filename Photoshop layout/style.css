@@ -1,0 +1,199 @@
+* {
+	box-sizing: border-box;
+	font-family: Helvetica, sans-serif;
+}
+
+body {
+	margin: 0;
+	background: #ebebeb;
+}
+
+.container {
+	width: 1000px;
+	margin: auto;
+	background: white;
+	position: relative;
+}
+
+.main-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 2rem;
+}
+
+.main-nav a,
+.footer-nav a {
+	margin-left: 2rem;
+	text-decoration: none;
+	color: white;
+}
+
+.banner {
+	height: 600px;
+	background: url(banner.jpg);
+	background-position: center;
+	background-size: cover;
+	background-color: rgba(0, 0, 0, 0.25);
+	background-blend-mode: overlay;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	padding-bottom: 4rem;
+	color: white;
+}
+
+.logo {
+	text-transform: uppercase;
+	font-weight: lighter;
+	font-size: 1.5rem;
+	color: white;
+	text-align: center;
+}
+
+.banner-slogan {
+	font-size: 2rem;
+	margin-bottom: 0rem;
+}
+
+.banner-subslogan {
+	text-transform: uppercase;
+	margin-top: 0;
+	font-size: 0.8rem;
+	letter-spacing: 0.15rem;
+	word-spacing: 0.2rem;
+}
+
+.signup-form {
+	margin-top: 2rem;
+}
+
+.banner .signup-form p:first-child {
+	font-style: italic;
+	font-size: 0.8rem;
+	text-align: center;
+}
+
+.signup-email {
+	background-color: white;
+	width: 250px;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 5px 0 0 5px;
+}
+
+.signup-email::placeholder {
+	text-transform: uppercase;
+}
+
+.signup-button {
+	padding: 0.8rem 1.5rem;
+	background: #51a100;
+	color: white;
+	border: none;
+}
+
+.signup-form .inputs {
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	text-transform: uppercase;
+	border-radius: 0 5px 5px 0;
+}
+
+.section-title {
+	font-size: 2rem;
+	text-align: center;
+}
+
+.section {
+	padding: 4rem 2rem;
+	color: #a2a2a2;
+	border-bottom: 2px solid #a2a2a230;
+}
+
+.section h1 {
+	color: #545454;
+}
+
+.grid {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 1fr 1fr;
+}
+
+.quote {
+	color: #a2a2a2;
+	font-style: italic;
+	padding: 0;
+}
+
+.quote q {
+	display: block;
+	margin-bottom: 2rem;
+}
+
+.quote-header {
+	font-size: 0.8rem;
+	display: grid;
+	gap: 0 1rem;
+	grid-template-columns: 40px 1fr;
+	grid-template-rows: 1fr 1fr;
+	align-items: center;
+}
+
+.quote-header img {
+	max-width: 100%;
+	grid-row: 1 / -1;
+	grid-column: 1;
+	border-radius: 50%;
+}
+
+.quote-header h1 {
+	font-size: 1rem;
+	margin: 0;
+}
+
+.quote-header p {
+	font-size: 0.8rem;
+	margin: 0.25rem 0 0;
+}
+
+.small-width {
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.section .signup-form {
+	text-align: center;
+}
+
+.section .signup-email,
+.section .signup-button {
+	border: 1px solid #51a100;
+}
+
+.footer-nav {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.footer-nav a {
+	color: #545454;
+}
+
+.main-footer {
+	text-align: center;
+	color: #545454;
+	margin: 1rem 0 2rem;
+}
