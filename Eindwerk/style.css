@@ -1,0 +1,348 @@
+:root {
+	--primary-color: rgb(218, 53, 93);
+	--dark: rgb(88, 88, 88);
+	--light: rgb(243, 243, 243);
+	--gray: rgb(165, 165, 165);
+	--darker: rgb(44, 44, 44);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+
+/* ---------- Mobile ---------- */
+body {
+	margin: 0;
+	font-family: 'Lato';
+}
+
+/* --- header --- */
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 1rem 0;
+}
+.header {
+	align-items: center;
+}
+
+.main-nav {
+	text-align: right;
+}
+
+.main-nav > a {
+	text-decoration: 0;
+	color: var(--light);
+	margin-left: 0.1rem;
+}
+/* --- end header --- */
+
+/* --- home --- */
+#home {
+	background-image: url(images/header-bg.png);
+	height: 700px;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	color: var(--light);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	text-align: center;
+	padding-bottom: 4rem;
+	border-bottom: 7px solid var(--primary-color);
+}
+
+.banner-title {
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.banner-line {
+	border-bottom: 1px solid var(--primary-color);
+	width: 15%;
+	margin: 0 auto;
+}
+
+.banner-slogan {
+	width: 60%;
+	margin: 2rem auto;
+}
+
+.banner-button {
+	background-color: var(--primary-color);
+	color: var(--light);
+	border: none;
+	border-radius: 30px;
+	padding: 0.7rem 2rem;
+}
+
+.banner-button:hover {
+	background-color: var(--light);
+	color: var(--primary-color);
+	cursor: pointer;
+}
+/* --- end home --- */
+
+/* --- about --- */
+#about {
+	padding-top: 3rem;
+	background-color: var(--light);
+	color: var(--dark);
+}
+
+.about-line {
+	border-bottom: 1px solid var(--primary-color);
+	width: 30%;
+	margin-bottom: 1.5rem;
+}
+
+.about-link {
+	color: var(--primary-color);
+	text-decoration: none;
+}
+.about-laptop {
+	width: 100%;
+	height: auto;
+}
+/* --- end about --- */
+
+/* --- services --- */
+#services {
+	margin: 4rem 0;
+	color: var(--dark);
+}
+
+.services-top {
+	text-align: center;
+}
+
+.services-line {
+	border-bottom: 1px solid var(--primary-color);
+	width: 15%;
+	margin: 0 auto;
+}
+
+.services-icon {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.services-icon > h2 {
+	text-transform: uppercase;
+}
+
+/* --- end services --- */
+
+/* --- quote --- */
+#quote {
+	background-image: url(images/header-bg.png);
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	color: var(--light);
+	text-align: center;
+	padding: 5rem 0;
+}
+
+.qoute-text {
+	width: 60%;
+	margin: 3rem auto;
+}
+/* --- end quote --- */
+
+/* -- prices --- */
+#prices {
+	padding: 3rem 0;
+	color: var(--dark);
+	background-color: var(--light);
+}
+
+.prices-line {
+	border-bottom: 1px solid var(--primary-color);
+	width: 15%;
+	margin: 0 auto;
+}
+.prices-top {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.item {
+	text-align: center;
+	background-color: white;
+}
+
+.item-price {
+	background-color: var(--dark);
+	color: var(--light);
+	padding: 2rem 0 4rem 0;
+	width: 100%;
+}
+
+.item-price-special {
+	background-color: var(--primary-color);
+	color: var(--light);
+	padding: 2rem 0 4rem 0;
+	width: 100%;
+}
+
+.item-price-title {
+	font-size: 2.5rem;
+}
+
+.item-price-title,
+.item-price-text {
+	margin: 0;
+}
+
+.euro {
+	font-size: 15px;
+}
+
+.prices-tier {
+	position: relative;
+	bottom: 30px;
+	z-index: 10;
+	font-size: 20px;
+	background-color: var(--light);
+	width: 50%;
+	margin: 0 auto;
+	padding: 1rem 1rem;
+	border-radius: 30px;
+}
+
+.price-button {
+	border: none;
+	background-color: var(--primary-color);
+	color: var(--light);
+	padding: 1rem 4rem;
+	border-radius: 30px;
+	margin: 1.5rem 0;
+}
+
+.price-button:hover {
+	background-color: var(--gray);
+	color: var(--primary-color);
+	cursor: pointer;
+}
+
+/* --- end prices --- */
+
+/* --- info --- */
+#info {
+	margin: 6rem 0;
+}
+
+.info-flex {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+.info-title {
+	color: var(--primary-color);
+	font-size: 1.2rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.info-content {
+	padding: 0 1.3rem;
+}
+/* --- end info --- */
+
+/* --- community --- */
+#community {
+	background-color: var(--primary-color);
+	padding: 1.5rem 0;
+}
+
+.community-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.community-title {
+	font-size: 1.5rem;
+	color: var(--light);
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.community-button {
+	border: none;
+	background-color: var(--light);
+	color: var(--primary-color);
+	padding: 1rem 4rem;
+	border-radius: 30px;
+	margin-left: 2rem;
+}
+
+.community-button:hover {
+	background-color: var(--dark);
+	color: var(--light);
+	cursor: pointer;
+}
+/* --- end community --- */
+
+/* --- footer --- */
+footer {
+	text-align: center;
+	background-color: var(--darker);
+	color: var(--light);
+	padding: 3rem 0;
+}
+
+@media screen and (min-width: 600px) {
+	.main-nav > a {
+		margin-left: 0.7rem;
+	}
+
+	.services-text,
+	.prices-text {
+		width: 80%;
+		margin: 1rem auto;
+	}
+
+	.qoute-text {
+		width: 80%;
+		margin: 3rem auto;
+	}
+
+	.item {
+		width: 75%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.main-nav > a {
+		margin-left: 1.5rem;
+	}
+
+	.services-text,
+	.prices-text {
+		width: 50%;
+		margin: 1rem auto;
+	}
+
+	.qoute-text {
+		width: 60%;
+		margin: 3rem auto;
+	}
+
+	.item {
+		width: 70%;
+	}
+
+	.community-title {
+		font-size: 2.5rem;
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	.item {
+		width: 90%;
+	}
+}
